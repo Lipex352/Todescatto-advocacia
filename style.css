@@ -698,7 +698,7 @@ h4 {
   justify-content: center;
   font-size: 1.75rem;
   color: var(--primary-gold);
-  margin-bottom: 24px;
+  margin: 0 auto 24px auto;
   transition: var(--transition);
 }
 
@@ -1059,8 +1059,146 @@ h4 {
   }
 
   .footer-bottom {
-    flex-direction: column;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     gap: 16px;
     text-align: center;
+  }
+
+  .footer-bottom p {
+    text-align: center !important;
+  }
+
+  /* === CENTRALIZACAO MOBILE (exceto Processo) === */
+
+  /* Centro geral de todas as seções */
+  .hero-container,
+  .hero-content,
+  .hero-subtitle,
+  .section-title,
+  .badge,
+  .service-card,
+  .differential-card,
+  .testimonial-card,
+  .stat-card,
+  .stat-info,
+  .about-text,
+  .about-text p,
+  .footer-col,
+  .contact-info,
+  .contact-info li,
+  .footer-title,
+  .footer-links,
+  .footer-legal {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-container {
+    align-items: center;
+  }
+
+  .stat-card {
+    flex-direction: column;
+  }
+
+  .contact-info li {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .service-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .differential-card i {
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+
+  /* Processo — manter alinhamento à esquerda */
+  #workflow .step-card,
+  #workflow .step-card h3,
+  #workflow .step-card p {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  /* Desafios do Segurado — centralizar */
+  .problem-card {
+    text-align: center !important;
+    align-items: center;
+    border-left: none !important;
+    border-top: 3px solid var(--primary-gold) !important;
+  }
+
+  .problem-card i {
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+
+  /* Sobre o Escritório — centralizar */
+  #about .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+  }
+
+  #about .solution-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .solution-content p {
+    text-align: center;
+  }
+
+  #about .solution-visual {
+    width: 100%;
+    flex: unset !important;
+    box-sizing: border-box;
+  }
+
+  #about .stat-card {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #about .stat-card span {
+    font-size: clamp(1.8rem, 8vw, 3rem) !important;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Rodapé — centralizar tudo */
+  .footer-top .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-top .footer-col p,
+  .footer-top .footer-col a,
+  .footer-links,
+  .footer-links a,
+  .contact-info,
+  .contact-info li,
+  .contact-info div,
+  .footer-title {
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-top .footer-col img {
+    margin: 0 auto;
   }
 }
